@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nineinfosys.electricityconverter">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:hardwareAccelerated="false"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ActivitySetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".SearchActivity" />
+
+
+        <activity android:name=".ConverterActivity.LinearChargeDensityConverterActivity" />
+        <activity android:name=".ConverterActivity.SurfaceChargeDensityConverterActivity" />
+        <activity android:name=".ConverterActivity.VolumeChargeDensityActivity" />
+        <activity android:name=".ConverterActivity.LinearCurrentDensityActivity" />
+        <activity android:name=".ConverterActivity.ElectricFieldStrengthActivity" />
+        <activity android:name=".ConverterActivity.ElectricPotentialActivity" />
+        <activity android:name=".ConverterActivity.SurfaceCurrentDensityActivity" />
+        <activity android:name=".ConverterActivity.ElectricResistanceConverterActivity" />
+        <activity android:name=".ConverterActivity.ElectricResistivityConverterActivity" />
+        <activity android:name=".ConverterActivity.ConductanceConverterActivity" />
+        <activity android:name=".ConverterActivity.ChargeConverterActivity" />
+        <activity android:name=".ConverterActivity.ConductivityConverterActivity" />
+        <activity android:name=".ConverterActivity.ElectrostaticCapacitanceActivity" />
+        <activity android:name=".ConverterActivity.InductanceConverterActivity" />
+        <activity android:name=".ConverterActivity.CurrentConverterActivity" />
+        <activity android:name=".ConverterActivityList.ConversionLinearChargeListActivity" />
+        <activity android:name=".ConverterActivityList.ConversionSurfaceChargeListActivity" />
+        <activity android:name=".ConverterActivityList.ConversionVolumeChargeDensityListActivity" />
+        <activity android:name=".ConverterActivityList.LinearCurrentDensityListActivity" />
+        <activity android:name=".ConverterActivityList.SurfaceCurrentDensityListActivity" />
+        <activity android:name=".ConverterActivityList.ElectricFieldStrengthListActivity" />
+        <activity android:name=".ConverterActivityList.ElectricPotentialListActivity" />
+        <activity android:name=".ConverterActivityList.ElectricResistanceListActivity" />
+        <activity android:name=".ConverterActivityList.ElectricResistivityListActivity" />
+        <activity android:name=".ConverterActivityList.ConductanceConverterListActivity" />
+        <activity android:name=".ConverterActivityList.ChargeConverterListActivity" />
+        <activity android:name=".ConverterActivityList.ConductivityConverterListActivity" />
+        <activity android:name=".ConverterActivityList.CapacitanceConverterListActivity" />
+        <activity android:name=".ConverterActivityList.InductanceListActivity" />
+        <activity android:name=".ConverterActivityList.CurrentConverterListActivity" />
+        
+    </application>
+
+</manifest>
