@@ -23,6 +23,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.electricityconverter.Adapter.RecyclerViewConversionListAdapter;
 import com.nineinfosys.electricityconverter.Engin.LinearChargeDensityConverter;
 import com.nineinfosys.electricityconverter.R;
@@ -79,7 +82,10 @@ public class ConversionLinearChargeListActivity extends AppCompatActivity implem
             window.setStatusBarColor(Color.parseColor("#ad6100"));
         }
 
-
+        MobileAds.initialize(ConversionLinearChargeListActivity.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView) findViewById(R.id.adViewUnitConverterList);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         //format of decimal pint
         formatsetting();
 

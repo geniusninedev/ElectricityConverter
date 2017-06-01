@@ -23,6 +23,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.electricityconverter.Adapter.RecyclerViewConversionListAdapter;
 import com.nineinfosys.electricityconverter.Engin.ElectrostaticCapacitanceConverter;
 import com.nineinfosys.electricityconverter.R;
@@ -99,7 +102,10 @@ public class CapacitanceConverterListActivity extends AppCompatActivity implemen
             window.setStatusBarColor(Color.parseColor("#6e291d"));
         }
 
-
+        MobileAds.initialize(CapacitanceConverterListActivity.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView) findViewById(R.id.adViewUnitConverterList);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         //format of decimal pint
         formatsetting();
         edittextConversionListvalue=(EditText)findViewById(R.id.edittextConversionListvalue) ;

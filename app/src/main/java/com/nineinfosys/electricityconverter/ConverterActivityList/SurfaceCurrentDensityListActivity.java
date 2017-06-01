@@ -23,6 +23,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.electricityconverter.Adapter.RecyclerViewConversionListAdapter;
 import com.nineinfosys.electricityconverter.Engin.SurfaceCurrentDensityConverter;
 import com.nineinfosys.electricityconverter.R;
@@ -80,7 +83,10 @@ public class SurfaceCurrentDensityListActivity extends AppCompatActivity impleme
             window.setStatusBarColor(Color.parseColor("#c43c00"));
         }
 
-
+        MobileAds.initialize(SurfaceCurrentDensityListActivity.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView) findViewById(R.id.adViewUnitConverterList);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         //format of decimal pint
         formatsetting();
 

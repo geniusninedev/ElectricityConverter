@@ -23,6 +23,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.electricityconverter.Adapter.RecyclerViewConversionListAdapter;
 import com.nineinfosys.electricityconverter.Engin.ElectricResistanceConverter;
 import com.nineinfosys.electricityconverter.R;
@@ -84,7 +87,10 @@ public class ElectricResistanceListActivity extends AppCompatActivity implements
             window.setStatusBarColor(Color.parseColor("#707070"));
         }
 
-
+        MobileAds.initialize(ElectricResistanceListActivity.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView) findViewById(R.id.adViewUnitConverterList);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         //format of decimal pint
         formatsetting();
 

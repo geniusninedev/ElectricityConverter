@@ -32,6 +32,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.electricityconverter.ConverterActivityList.ConversionSurfaceChargeListActivity;
 import com.nineinfosys.electricityconverter.Engin.SurfaceChargeDensityConverter;
 import com.nineinfosys.electricityconverter.R;
@@ -79,7 +82,10 @@ public class SurfaceChargeDensityConverterActivity extends AppCompatActivity imp
 
         formatsetting();
 
-
+        MobileAds.initialize(SurfaceChargeDensityConverterActivity.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView) findViewById(R.id.adViewUnitConverter);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         //keyboard hidden first time
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 

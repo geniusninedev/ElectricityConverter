@@ -23,6 +23,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.electricityconverter.Adapter.RecyclerViewConversionListAdapter;
 import com.nineinfosys.electricityconverter.Engin.ConductivityConverter;
 import com.nineinfosys.electricityconverter.R;
@@ -82,7 +85,10 @@ public class ConductivityConverterListActivity extends AppCompatActivity impleme
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(Color.parseColor("#004ba0"));
         }
-
+        MobileAds.initialize(ConductivityConverterListActivity.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView) findViewById(R.id.adViewUnitConverterList);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         //format of decimal pint
         formatsetting();
 
