@@ -22,6 +22,7 @@
         android:layout_marginRight="2dp"
         android:layout_marginLeft="2dp"
         android:layout_marginTop="2dp"
+        android:background="@color/colordialog"
         android:layout_marginBottom="2dp">
     </android.support.v7.widget.RecyclerView>
 

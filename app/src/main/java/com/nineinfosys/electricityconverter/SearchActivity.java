@@ -22,13 +22,14 @@ import com.nineinfosys.electricityconverter.ConverterActivity.ElectricFieldStren
 import com.nineinfosys.electricityconverter.ConverterActivity.ElectricPotentialActivity;
 import com.nineinfosys.electricityconverter.ConverterActivity.ElectricResistanceConverterActivity;
 import com.nineinfosys.electricityconverter.ConverterActivity.ElectricResistivityConverterActivity;
+import com.nineinfosys.electricityconverter.ConverterActivity.ElectrostaticCapacitanceActivity;
 import com.nineinfosys.electricityconverter.ConverterActivity.InductanceConverterActivity;
 import com.nineinfosys.electricityconverter.ConverterActivity.LinearChargeDensityConverterActivity;
 import com.nineinfosys.electricityconverter.ConverterActivity.LinearCurrentDensityActivity;
 import com.nineinfosys.electricityconverter.ConverterActivity.SurfaceChargeDensityConverterActivity;
 import com.nineinfosys.electricityconverter.ConverterActivity.SurfaceCurrentDensityActivity;
 import com.nineinfosys.electricityconverter.ConverterActivity.VolumeChargeDensityActivity;
-import com.nineinfosys.electricityconverter.Engin.ElectrostaticCapacitanceConverter;
+
 
 
 
@@ -477,7 +478,7 @@ public class SearchActivity extends AppCompatActivity implements TextWatcher {
         startActivity(i7);
     }
     private void electrostatic() {
-        Intent i7=new Intent(SearchActivity.this,ElectrostaticCapacitanceConverter.class);
+        Intent i7=new Intent(SearchActivity.this,ElectrostaticCapacitanceActivity.class);
         startActivity(i7);
     }
     private void electricResistivity() {
